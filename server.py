@@ -29,4 +29,4 @@ def postReceiveHook():
 	return "Thx"
 
 if __name__ == "__main__":
-    webapp.run(debug=True)
+    webapp.run()
