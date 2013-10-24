@@ -15,9 +15,7 @@ def do_pdf(repo):
 webapp = Flask(__name__)
 @webapp.route("/tex2pdf", methods=['POST'])
 def postReceiveHook():
-	print "Hello"
 	data = json.loads(request.form['payload'])
-	print "Ola"
 	changes_tex = []
 	if data['ref'].split('/')[-1] == 'master':
 		for commit in data['commits']:
