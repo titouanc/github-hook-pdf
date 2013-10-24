@@ -2,7 +2,7 @@ from flask import Flask, request
 import json
 import subprocess
 
-known_repos = ['Stage-Railnova', 'shiny-robot']
+known_repos = ['my-awesome-repo']
 branch_name = "autopdf"
 
 def do_pdf(repo):
