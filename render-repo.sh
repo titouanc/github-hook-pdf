@@ -11,5 +11,6 @@ cd $1
 git pull origin master
 
 make -f Makepdf || exit 1
-git commit *.pdf -m "[autopdf] PDF rendering"
+git add *.pdf
+git commit -m "[autopdf] PDF rendering"
 git push origin master:$3 || exit 1
