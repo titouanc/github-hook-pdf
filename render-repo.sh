@@ -9,6 +9,7 @@ fi
 
 cd $1
 git checkout -b $3
+git pull --no-edit origin master
 git pull --no-edit origin $3
 echo " * Repo pulled"
 
