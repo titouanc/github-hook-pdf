@@ -23,7 +23,8 @@ Example: `http://my.awesome.server/tex2pdf`
 
 Then add a file called Makepdf, with a Makefile syntax, which describe how to
 build the final pdf. It should also produce a file named `autopdf.done` which
-contains all files that will be commited by this script.
+contains all files that will be commited by this script. You can find a
+Makepdf.example file in this repo
 
 Make sure the repo is added to the `known_repos` list in server.py.
 
