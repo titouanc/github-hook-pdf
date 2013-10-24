@@ -5,16 +5,18 @@ OKFILE='autopdf.done'
 if [ ! -d $1 ]; then
 	echo " * Unknow repo. Cloning..."
 	git clone $2
+	cd $1
+	git config user.name "autopdf bot"
+else
+	cd $1
+	git checkout -b $3
+	git pull --no-edit origin master
+	git pull --no-edit origin $3
 fi
-
-cd $1
-git checkout -b $3
-git pull --no-edit origin master
-git pull --no-edit origin $3
 echo " * Repo pulled"
 
 echo " * Beginning pdf rendering..."
-make -f Makepdf
+make -Bf Makepdf
 echo " * pdf rendering finished..."
 
 if [ -f $OKFILE ]; then
